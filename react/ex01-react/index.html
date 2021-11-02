@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REACT INICIANTE</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  
+    <style>
+        .active{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+ <div id="app"></div>
+
+ <script type="text/babel"> 
+    //que legal hein! Criei um componente react..esse é bom pra criar coisas repetidas
+    const Button =  () => {
+    return <button>Clique ali</button>
+    }
+
+    class Input extends React.Component{
+        render(){
+            return <input type="text"></input>
+        }
+    }
+
+ const MainNav = () => {
+     return <nav>
+            <ul>
+                <li>texto1</li>
+                <li>texto2</li>    
+           </ul>
+            </nav>
+        }
+
+
+ function App(){
+     return( <div>
+        <MainNav/>
+        <Button/>
+        <Button/>
+        <Button/>
+        <Input />   
+        Meu App</div>
+)}
+
+
+
+
+
+
+ReactDOM.render(<App/>, document.getElementById("app"))
+</script>
+</body>
+</html>
